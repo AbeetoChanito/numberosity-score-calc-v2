@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#d32f2f">
+  <title>Score Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Row 1: Hang, Scores, High Stake, Auton Bonus -->
+  <div class="top-row">
+    <div class="hang-container">
+      <div class="hang-alliance red-hang">
+        <div class="grid-box red" id="redGrid1">
+          <div class="grid" data-index="2"></div>
+          <div class="grid" data-index="1"></div>
+          <div class="grid" data-index="0"></div>
+        </div>
+        <div class="grid-box red" id="redGrid2">
+          <div class="grid" data-index="2"></div>
+          <div class="grid" data-index="1"></div>
+          <div class="grid" data-index="0"></div>
+        </div>
+      </div>
+    </div>
+    <div class="center-container">
+      <div class="scores-and-high-stake">
+        <div class="score red-score">
+          <span id="redPoints">0</span>
+        </div>
+        <div class="score blue-score">
+          <span id="bluePoints">0</span>
+        </div>
+        <div class="score gray-score" id="deltaScore">0</div>
+      </div>
+      <div class="auton-container">
+        <button id="auton-red" class="auton-button">A</button>
+        <button id="auton-blue" class="auton-button">A</button>
+        <div class="stake" id="highStake">
+          <div class="stake-cap"></div>
+          <div class="stake-pole"></div>
+          <div class="high-stake-ring" id="highStakeRing"></div>
+          <div class="ring-container" id="highStake-rings"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hang-container">
+      <div class="hang-alliance blue-hang">
+        <div class="grid-box blue" id="blueGrid1">
+          <div class="grid" data-index="2"></div>
+          <div class="grid" data-index="1"></div>
+          <div class="grid" data-index="0"></div>
+        </div>
+        <div class="grid-box blue" id="blueGrid2">
+          <div class="grid" data-index="2"></div>
+          <div class="grid" data-index="1"></div>
+          <div class="grid" data-index="0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Wall and Alliance Stakes -->
+  <div class="wall-alliance-row">
+    <div class="stake-column" id="wall1-container"></div>
+    <div class="stake-column" id="alliance1-container"></div>
+    <div class="stake-column" id="alliance2-container"></div>
+    <div class="stake-column" id="wall2-container"></div>
+  </div>
+
+  <!-- Row 3: Three Mogos -->
+  <div class="mogo-row-three">
+    <div class="stake-column" id="mogo1-container"></div>
+    <div class="stake-column" id="mogo2-container"></div>
+    <div class="stake-column" id="mogo3-container"></div>
+  </div>
+
+  <!-- Row 4: Two Mogos and Reset Button -->
+  <div class="mogo-row-two">
+    <div class="stake-column" id="mogo4-container"></div>
+    <div class="stake-column" id="mogo5-container"></div>
+  </div>
+  <button class="global-reset" id="globalReset">🗑️</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
