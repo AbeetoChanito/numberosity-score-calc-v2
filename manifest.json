@@ -2,7 +2,7 @@
     "name": "V5RC High Stakes Score Calculator",
     "short_name": "V5RC HSt Calc",
     "description": "A scoring application for V5RC High Stakes",
-    "start_url": "/vexScoreCalc",
+    "start_url": "/numberosity-score-calc-v2",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#d32f2f",

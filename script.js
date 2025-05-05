@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/vexScoreCalc/serviceWorker.js')
+    navigator.serviceWorker.register('/numberosity-score-calc-v2/serviceWorker.js')
       .then(reg => console.log('Service Worker registered:', reg.scope))
       .catch(err => console.error('Registration failed:', err));
   });
