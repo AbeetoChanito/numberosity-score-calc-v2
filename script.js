@@ -91,11 +91,11 @@ function calculateScore() {
   document.getElementById('bluePoints').textContent = scores.blue;
   document.getElementById('deltaScore').innerHTML = "&Delta;: " + Math.abs(scores.red - scores.blue);
   if (scores.red > scores.blue) {
-    document.getElementById('deltaScore').className = 'score red-score';
+    document.getElementById('deltaScore').className = 'score red-score delta-score';
   } else if (scores.red < scores.blue) {
-    document.getElementById('deltaScore').className = 'score blue-score';
+    document.getElementById('deltaScore').className = 'score blue-score delta-score';
   } else {
-    document.getElementById('deltaScore').className = 'score gray-score';
+    document.getElementById('deltaScore').className = 'score gray-score delta-score';
   }
 }
 

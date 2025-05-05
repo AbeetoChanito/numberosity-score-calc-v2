@@ -115,6 +115,7 @@ body {
 .red-score { background: #ff000020; color: #d32f2f; }
 .blue-score { background: #0000ff20; color: #303f9f; }
 .gray-score { background: #2f2f3120; color: #000000; }
+.delta-score { font-size: 20px; padding-top: 14px; width: 60px; }
 
 #highStake {
   position: relative;
