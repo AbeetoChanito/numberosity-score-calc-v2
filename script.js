@@ -89,7 +89,7 @@ function calculateScore() {
 
   document.getElementById('redPoints').textContent = scores.red;
   document.getElementById('bluePoints').textContent = scores.blue;
-  document.getElementById('deltaScore').textContent = Math.abs(scores.red - scores.blue);
+  document.getElementById('deltaScore').innerHTML = "&Delta;: " + Math.abs(scores.red - scores.blue);
   if (scores.red > scores.blue) {
     document.getElementById('deltaScore').className = 'score red-score';
   } else if (scores.red < scores.blue) {
