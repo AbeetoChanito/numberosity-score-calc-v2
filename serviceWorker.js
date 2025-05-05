@@ -1,12 +1,12 @@
 const CACHE_NAME = 'highStakesV5RCCalc';
 const urlsToCache = [
-  '/vexScoreCalc/',
-  '/vexScoreCalc/index.html',
-  '/vexScoreCalc/styles.css',
-  '/vexScoreCalc/script.js',
-  '/vexScoreCalc/manifest.json',
-  '/vexScoreCalc/icons/highStakesMogo192x192.png',
-  '/vexScoreCalc/icons/highStakesMogo512x512.png'
+  '/numberosity-score-calc-v2/',
+  '/numberosity-score-calc-v2/index.html',
+  '/numberosity-score-calc-v2/styles.css',
+  '/numberosity-score-calc-v2/script.js',
+  '/numberosity-score-calc-v2/manifest.json',
+  '/numberosity-score-calc-v2/icons/highStakesMogo192x192.png',
+  '/numberosity-score-calc-v2/icons/highStakesMogo512x512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -32,8 +32,8 @@ self.addEventListener('fetch', event => {
         return fetch(event.request).catch(() => {
           // Network failed (offline), handle navigation requests
           if (event.request.mode === 'navigate') {
-            console.log('Offline, falling back to /vexScoreCalc/index.html for:', event.request.url);
-            return caches.match('/vexScoreCalc/index.html') || Promise.reject('No fallback available');
+            console.log('Offline, falling back to /numberosity-score-calc-v2/index.html for:', event.request.url);
+            return caches.match('/numberosity-score-calc-v2/index.html') || Promise.reject('No fallback available');
           }
           // For non-navigation requests, let it fail silently (e.g., images)
           return Promise.reject('No cache or network available');
@@ -41,8 +41,8 @@ self.addEventListener('fetch', event => {
       })
       .catch(error => {
         console.error('Fetch handler error:', error, 'for:', event.request.url);
-        // Final fallback if caches.match('/vexScoreCalc/index.html') returns undefined
-        return caches.match('/vexScoreCalc/index.html') || new Response('Offline and no fallback available', {
+        // Final fallback if caches.match('/numberosity-score-calc-v2/index.html') returns undefined
+        return caches.match('/numberosity-score-calc-v2/index.html') || new Response('Offline and no fallback available', {
           status: 503,
           statusText: 'Service Unavailable'
         });
